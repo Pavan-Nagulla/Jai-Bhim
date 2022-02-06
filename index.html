@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">JaiBhim</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="bhim1.mp4" autoplay muted loop ></video>
+      <video class="video-slide" src="bhim2.mp4" autoplay loop ></video>
+      <video class="video-slide" src="bhim3.mp4" autoplay  muted loop></video>
+      <video class="video-slide" src="bhim4.mp4" autoplay muted loop ></video>
+      <video class="video-slide" src="bhim3.mp4" autoplay  muted loop></video>
+      <div class="content active">
+        <h1>Jai<br><span>Bhim</span></h1>
+        <p>Jai Bhim (transl. Victory to Bhim) is a 2021 Indian Tamil-language legal drama film directed by T. J. Gnanavel and produced by Jyothika and Suriya under 2D Entertainment. The film stars Suriya and Lijomol Jose with Manikandan, Rajisha Vijayan, Prakash Raj, Rao Ramesh and others in supporting roles. Based on a true incident in 1993, which involves a case fought by Justice K. Chandru,[2] it revolves around the lives of Sengeni and Rajakannu, a couple from the Irular tribe.[3] Rajakannu was arrested by the police, and was later missing from the police station. Sengeni seeks the help of an advocate Chandru to seek justice for her husband. Chandru files a habeas corpus case and he refers Rajan case to continue further to find the truth.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1><br><span>Suriya</span></h1>
+        <p>A brave activist-lawyer fights for justice when a poor tribal man, who gets falsely accused of robbery, goes missing from the police custody.The film received acclaim from critics, who praised the story, performances, direction and social message. It is currently the highest user rated film on IMDb with a score of 9.3/10, and has become the first Indian film to achieve the feat.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Heart<br><span>Touching</span></h1>
+        <p>Suriya is terrific as an advocate. He stuns all with his body language, mannerisms, and dialogues. He came with subtle and powerful expressions and his new look attracts all.The actor should be appreciated for picking up such scripts.
+          Lijomal Jose who plays the tribal lady is astonishing in her role. The way she portrays a helpless pregnant lady fighting for her husband is terrific. In the same way, Manikandan, who plays Rajanna is also intense. Be it his look or the way he showcases the pain in all the investigation scenes looks realistic.
+          </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Emotional<br><span>drama</span></h1>
+        <p>Director Gynanavel, he has done an amazing job with the film. He takes the real-life story of lawyer Chandru and showcases one of his best cases on screen. The way he adapts the screenplay with gripping narration is the highlight. The film shows how the lower castes are suppressed and keep you guessing. The pain that the tribal couple goes through is showcased in a moving manner.
+          Music and BGM by Sean Roldan are just amazing. </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>upper-caste.<br><span>Pain</span></h1>
+        <p>The director honestly has to be offered for the stupendous fulfillment of this movie which solely entertains circle of relatives audiences without relying upon masala component or "mass"components.authentic content by using Ar Deepika Dhilip</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>
